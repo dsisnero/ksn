@@ -9,14 +9,11 @@ module Ksn
       @form = page.form_with(:name => 'form1')
     end
 
-
     def logon(name,password)
       form.user_name = name
       form.password = password
       form.click_button
     end
-    
-    
     
   end
 
@@ -31,7 +28,6 @@ module Ksn
       @agent = Mechanize.new
       @agent.user_agent_alias = 'Windows IE 7'
     end
-
 
     def home_url
       'https://ksn2.faa.gov/'
